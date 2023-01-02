@@ -1,0 +1,1421 @@
+
+
+
+
+Sr.
+No.	Title	Sign
+
+1	
+Assignment No 1	
+	
+Assignment No 2	
+
+3	
+Assignment No 3	
+
+4	
+Assignment No 4	
+
+5	
+Assignment No 5	
+
+6	
+Assignment No 6	
+
+Assignment No 1
+Q1) Write a php program to find maximum of three numbers. 
+Code:
+<?php
+      $num1=20;
+      $num2=15;
+      $num3=22;
+      if($num1>$num2 && $num1>$num3){
+        echo $num1;
+      }
+      else{
+        if($num2>$num1 && $num2>$num3){
+          echo $num2;
+        }
+        else
+          echo $num3;
+      }
+?>
+Output
+ 
+
+
+
+2. Write a php program to swap two numbers. 
+Code:
+
+<?php
+$a = 15;
+$b = 27;
+echo "\nThe number before swapping is:\n";
+echo "Number a =".$a." and b=".$b;
+$temp = $a;
+$a = $b;
+$b = $temp;
+ 
+echo "\nThe number after swapping is: \n";
+echo "Number a =".$a." and b=".$b."\n";
+?>
+ 
+
+
+
+
+
+
+
+3. Write a php script to find out the sum of the Individual Digits. 
+Code:
+
+<?php  
+$num = 12345;  
+$sum=0; $rem=0;  
+  for ($i =0; $i<=strlen($num);$i++)  
+ {  
+  $rem=$num%10;  
+   $sum = $sum + $rem;  
+   $num=$num/10;  
+  }  
+ echo "Sum of digits 12345 is $sum";  
+ ?>  
+ 
+
+
+
+
+
+
+4. Write a php script to find out check whether the given number is Palindrome or no.
+
+<?php
+
+$num = 10;
+$p=$num;
+$revnum = 0;
+while ($num != 0)
+{
+$revnum = $revnum * 10 + $num % 10;
+$num = (int)($num / 10); 
+}
+ 
+if($revnum==$p)
+{
+echo $p," is Palindrome number";
+}
+else
+{
+echo $p." is not Palindrome number";
+}
+
+?>
+
+
+
+
+
+
+
+
+Output
+ 
+ 
+
+
+
+
+
+
+
+5. Write a php script to get the php version and configuration information.
+<?php
+phpinfo();
+?>
+Output :
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Write a php script to display the following strings.
+
+<?php
+echo "Tomorrow I \'ll learn PHP global variables."."\n"; 
+echo "This is a bad command : del c:\\*.*"."\n"; 
+?>
+Output:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+7. $var=’PHP Tutorial’. Put this variable into the title section, h3 tag and as an anchor text within an html document.
+
+<?php
+echo "<html>";
+echo "<head>";
+echo "<title>";
+echo "PHP TUTORIAl";
+echo "</title>";
+echo "<body>";
+echo "<h3>PHP TUTORIAL</h3>";
+echo "<hr>";
+echo "<p>PHP, an acronym for Hypertext Preprocessor, <br> is a widely-used open source general-purpose scripting language. <br>It is a cross-platform, HTML embedded server-side scripting language <br>and is especially suited for web development.</p>";
+echo "</body>";
+echo "</head>";
+echo "</html>";
+?>                 
+
+
+
+
+
+
+
+
+
+
+
+Output:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Assignment No 2
+1. Write a PHP function to test whether a number is greater than 30, 20 or 10 using ternary operator.
+<?php
+function trinary_Test($n){
+$r = $n > 30
+? "greater than 30 <br>"
+: ($n > 20
+? "greater than 20<br>"
+: ($n >10
+? "greater than 10<br>"
+: "Input a number atleast greater than 10!")); 
+echo $n." : ".$r."\n";
+}
+trinary_Test(32);
+trinary_Test(21);
+trinary_Test(12);
+trinary_Test(4);
+?>
+Output:
+ 
+
+
+2 Write a PHP program to print sum of digits..
+<?php
+    $number=345;
+    $sum=0;
+    for($i=0;$i<=strlen($number);$i++)
+    {
+        $sum=$sum+$number%10;
+        $number/=10;
+    }
+echo"sum of digit 345 is $sum";
+?>
+Output :
+ 
+
+
+
+
+
+
+
+
+3. Even or odd
+<?php
+$num = 13;  
+$count=0;  
+for ( $i=1; $i<=$num; $i++)  
+{  
+if (($num%$i)==0)  
+{  
+$count++;  
+}  
+}  
+if ($count<3)  
+{  
+echo "$num is a prime number.";  
+}
+else
+{
+echo "$num is not a prime number."; 
+}
+?>
+Output:
+ 
+
+4. Write a PHP program to check prime number.
+<?php
+$num = 13;  
+$count=0;  
+for ( $i=1; $i<=$num; $i++)  
+{  
+if (($num%$i)==0)  
+{  
+$count++;  
+}  
+}  
+if ($count<3)  
+{  
+echo "$num is a prime number.";  
+}
+else
+{
+echo "$num is not a prime number."; 
+}
+?>
+ 
+
+5. Write PHP program to print table of a number.
+<?php
+
+define('NUM', 12); 
+
+for($i=1 ; $i<=10 ; $i++) 
+{ 
+  echo $i*NUM; 
+  echo '<br>';   
+}
+
+?>
+Output :
+ 
+
+
+
+
+
+
+
+6. Write a PHP program to print factorial of a number.
+<?php
+$n = 10;  
+$f = 1;  
+for ($i=$n; $i>=1; $i--)   
+{  
+$f = $f * $i;  
+}  
+echo "$n! = $f";  
+?>
+Output:
+ 
+
+
+
+
+
+
+
+
+
+7. Write a PHP program to check armstrong number.
+<?php
+$num = readline("Enter the number: ");
+$total = 0;
+$x = $num;
+while ($x != 0) {
+    $rem = $x % 10;
+    $total = $total + $rem * $rem * $rem;
+    $x = $x / 10;
+}
+if ($num == $total) {
+    echo "Yes $num is an Armstrong number";
+} else {
+    echo "No $num is not an armstrong number";
+}
+?>
+Output :
+ 
+
+
+
+
+8. Write a PHP program to check palindrome number.
+<?php
+$num = 123454321;  
+$x = 0;
+$n =$num;
+while(floor($num))
+{  
+$mod = $num%10;
+$x = $x * 10 + $mod;  
+$num = $num/10;
+}  
+if($n==$x)
+{  
+echo "$n is a Palindrome number.";  
+}
+else
+{  
+echo "$n is not a Palindrome number.";  
+}  
+?>
+
+
+
+
+
+
+
+
+
+
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. Write a PHP program to print fibonacci series without using recursion and using recursion.
+<?php
+$num = 0;  
+$n1 = 0;  
+$n2 = 1;  
+echo "<h3>Fibonacci series for first 12 numbers: </h3>";  
+echo "\n";  
+echo $n1.' '.$n2.' ';  
+while ($num<10 )
+{  
+    $n3 = $n2 + $n1;  
+    echo $n3.' ';  
+    $n1 = $n2;  
+    $n2 = $n3;  
+    $num = $num + 1;  
+}
+?>
+Output :
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. Write a PHP program to reverse given number.
+<?php
+
+$num = 123456789;  
+$x = 0;
+$n =$num;
+
+while(floor($num))
+{  
+$mod = $num%10;
+$x = $x * 10 + $mod;  
+$num = $num/10;
+}  
+echo "Reverse of $n is $x.";
+?>
+Output :
+
+ 
+
+
+
+11. Write a PHP program to reverse given string.
+<?php
+echo strrev("Hello World!");
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. Write a PHP program to add two numbers.
+<?php
+
+$a=20;
+$b=20;
+$c=$a+$b;
+
+echo "Sum: ",$c;
+
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+13. Write a PHP program to subtract two numbers.
+<?php
+$x=30;  
+$y=15;  
+$z=$x-$y;  
+echo "Difference: ",$z;  
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+14. Write a PHP program to find area of triangle.
+<?php
+
+$b = 5;
+$h = 7;
+$a = NULL;
+
+$a = (float)(($b * $h) / 2);
+
+echo "\nArea of the triangle = " . $a . " sq. units";
+
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+15. Write a PHP program to find the area of rectangle.
+<?php
+ $length = 14;  
+ $width = 12;  
+ echo "Area of Rectangle is $length * $width= " . ($length * $width) . "<br />";  
+  ?>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+16. Write a PHP program to find if the given year is leap year or not.
+<?php
+$year = 2032;  
+
+if((0 == $year % 4) & (0 != $year % 100) | (0 == $year % 400))
+{
+echo "$year is a Leap Year.";    
+}
+
+else  
+{  
+echo "$year is not a Leap Year.";    
+}
+?>
+Output :
+
+ 
+
+
+
+
+17. Write a PHP program to print alphabet triangle.
+<?php
+$alpha = range('A', 'Z');  
+for($i=0; $i<5; $i++){   
+for($j=5; $j>$i; $j--){  
+ echo $alpha[$i];  
+    }  
+ echo "<br>";  
+}  
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+18. Write a PHP program to print number triangle.
+<?php
+echo "<pre>";
+for($i=1;$i<=10;$i++){
+      for($j=1;$j<=$i;$j++){
+        echo $j."&nbsp;";
+        if($j==$i){
+            echo "";
+            echo "<br/>";
+        }
+      }
+}
+echo "</pre>";
+?>
+Output :
+
+ 
+
+
+
+19. Write a PHP programs to print star triangle.
+<?php
+$alpha = range('A', 'Z');  
+for($i=0; $i<5; $i++){   
+for($j=5; $j>$i; $j--){  
+ echo $alpha[$i];  
+    }  
+ echo "<br>";  
+}  
+?>
+Assignment 3
+1.
+<?php
+for($x=1; $x<=16; $x++)
+{
+ if($x< 16)
+ {
+ echo "$x-";
+ }
+ else
+  {
+ echo "$x"."\n";
+  }
+}
+?>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Assignment No 3
+
+?	Create a script that displays 2-4-6-8-10-12-14-16 on one line. There will be no hyphen(-) at starting and ending position.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Create a script using a for loop to add all the integers between 0 and 50 and display the total.
+
+<?php
+$sum = 0;
+for($x=1; $x<=50; $x++)
+{
+$sum +=$x;
+}
+echo "The sum of the numbers 0 to 50 is $sum"."\n";
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+3. Create a script to construct the following pattern, using nested for loop
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Code4Example</title>
+</head>
+<body>
+ 
+ 
+<?php
+    for($x=1;$x<=5;$x++)
+    {
+    for ($y=1;$y<=$x;$y++)
+        {
+        echo "*";
+            if($y< $x)
+            {
+            echo " ";
+            }
+        }
+    echo "<br>";
+    }
+?>
+    
+</body>
+</html>
+
+
+
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Create a script to construct the following pattern, using a nested for loop
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Code4Example</title>
+</head>
+<body>
+ 
+ 
+<?php
+    $n=5;
+    for($i=1; $i<=$n; $i++)
+    {
+        for($j=1; $j<=$i; $j++)
+        {
+            echo ' * ';
+        }
+        echo '<br>';
+    }
+    for($i=$n; $i>=1; $i--)
+    {
+        for($j=1; $j<=$i; $j++)
+        {
+            echo ' * ';
+        }
+        echo '<br>';
+    }
+?>
+    
+</body>
+</html>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. Write a PHP script that creates the following table using for loops. Add cellpadding="3px" and cellspacing="0px" to the table tag.
+
+<?php
+echo "<table border =\"1\" style='border-collapse: collapse'>";
+	for ($row=1; $row <= 10; $row++) { 
+		echo "<tr> \n";
+		for ($col=1; $col <= 10; $col++) { 
+		   $p = $col * $row;
+		   echo "<td>$p</td> \n";
+		   	}
+	  	    echo "</tr>";
+		}
+		echo "</table>";
+?>
+Output :
+
+ 
+
+
+
+
+
+Assignment No 4
+
+1. Write a function to calculate the factorial of a given number .
+<?php
+$input=5;
+$fact =1;
+for($i=$input; $i>=1;$i--) {
+$fact = $fact * $i;
+}
+echo '<br>'. 'The factorial of the number 5 is '. $fact
+?>
+Output :
+
+ 
+
+
+
+2. Write a function to reverse a string.
+<?php
+function reverse_string($str1)
+{
+ $n = strlen($str1);
+ if($n == 1)
+   {
+    return $str1;
+   }
+ else
+   {
+   $n--;
+   return reverse_string(substr($str1,1, $n)) . substr($str1, 0, 1);
+   }
+}
+print_r(reverse_string('1234')."\n");
+?>
+Output :
+
+ 
+
+
+3. Write a PHP function that checks whether a string is all uppercase.
+<?php
+   $str = 'AUSTRALIA';
+
+   if (ctype_upper($str)) {
+      echo "Word has all uppercase characters!\n";
+   } else {
+      echo "Word does not have all uppercase characters!\n";
+   }
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+4. Write a PHP program to check if a person is eligible to vote
+<?php
+function check_vote() //function has been declared
+{
+    $name = "Person";
+    $age = 19;
+    if ($age >= 18) {
+        echo $name . ", Is Eligible For Vote";
+    } else {
+        echo $name . ", is eligible for vote. ";
+    }
+}
+check_vote(); //function has been called
+
+?>
+Output :
+
+ 
+
+
+
+
+5. Write a PHP program to calculate area of rectangle
+<?php
+function rect_area($length = 2, $width = 4) 
+{
+    $area = $length * $width;
+    echo "Area Of Rectangle with length " . $length . " & width " . $width . " is " . $area ;
+}
+rect_area(); 
+
+?>
+Output :
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Assignment No: 5
+
+Q . 1 $color = array(4=>’white’, 6 => ‘green’, 11=>’red’);
+         Write a PHP script to get the first element of the above array.
+
+<?php
+$color = array(4=> 'white',6 => 'green',11=>'red');
+print_r($color);
+echo "<br>";
+echo $color[4];
+?>
+Output:
+ 
+
+
+
+
+
+
+
+
+Q. 2 Write a PHP script that inserts a new item in an array position.
+
+<?php
+$original = array( '1','2','3','4','5' );
+echo 'Original array : '."\n";
+foreach ($original as $x) 
+{echo "$x ";}
+$inserted = '8';
+array_splice( $original, 3, 0, $inserted ); 
+echo " \n After inserting '8' the array is : "."\n";
+foreach ($original as $x) 
+{echo "$x ";}
+echo "\n"
+?>
+
+Output:
+ 
+
+
+
+
+
+
+
+ Q. 3 Write a PHP program to merge(by index) the following two arrays.
+Sample arrays:
+$array1 = array(array(77,87), array(23,45));
+$array2 = array(“w3resource”, “com”);
+
+
+<?php
+$array1 = array(array(77, 87), array(23, 45));
+$array2 = array("w3resource", "com");
+function merge_arrays_by_index($x, $y)
+{
+$temp = array(); $temp[] = $x; if(is_scalar($y))
+{
+$temp[] = $y;
+}
+else
+{
+foreach($y as $k => $v)
+{
+$temp[] = $v;
+}
+}
+return $temp;
+}
+echo '<pre>'; print_r(array_map('merge_arrays_by_index',$array2, $array1));
+?>
+
+
+
+
+Output:
+
+ 
+Assignment No: 6
+
+?	Design a registration Form using validation in PHP
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.error {color: #FF0001;}
+</style>
+</head>
+<body>
+
+<?php
+// define variables to empty values
+$nameErr = $emailErr = $mobilenoErr = $genderErr = $websiteErr = $agreeErr = "";
+$name = $email = $mobileno = $gender = $website = $agree = "";
+
+//Input fields validation
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+//String Validation
+if (empty($_POST["name"])) {
+$nameErr = "Name is required";
+} else {
+$name = input_data($_POST["name"]);
+// check if name only contains letters and whitespace if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+$nameErr = "Only alphabets and white space are allowed";
+}
+}
+
+//Email Validation
+if (empty($_POST["email"])) {
+$emailErr = "Email is required";
+} else {
+$email = input_data($_POST["email"]);
+// check that the e-mail address is well-formed
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+$emailErr = "Invalid email format";
+}
+}
+
+//Number Validation
+if (empty($_POST["mobileno"])) {
+$mobilenoErr = "Mobile no is required";
+} else {
+$mobileno = input_data($_POST["mobileno"]);
+// check if mobile no is well-formed
+if (!preg_match ("/^[0-9]*$/", $mobileno) ) {
+$mobilenoErr = "Only numeric value is allowed.";
+}
+//check mobile no length should not be less and greator than 10 if (strlen ($mobileno) != 10) {
+$mobilenoErr = "Mobile no must contain 10 digits.";
+}
+}
+
+//URL Validation
+if (empty($_POST["website"])) {
+$website = "";
+} else {
+$website = input_data($_POST["website"]);
+// check if URL address syntax is valid
+if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-
+9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+$websiteErr = "Invalid URL";
+}
+}
+
+//Empty Field Validation
+if (empty ($_POST["gender"])) {
+$genderErr = "Gender is required";
+} else {
+$gender = input_data($_POST["gender"]);
+}
+
+//Checkbox Validation
+if (!isset($_POST['agree'])){
+
+$agreeErr = "Accept terms of services before submit.";
+} else {
+$agree = input_data($_POST["agree"]);
+}
+}
+function input_data($data) {
+$data = trim($data);
+$data = stripslashes($data);
+$data = htmlspecialchars($data); return $data;
+}
+?>
+
+<h2>Registration Form</h2>
+<span class = "error">* required field </span>
+<br><br>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+Name:
+<input type="text" name="name">
+<span class="error">* <?php echo $nameErr; ?></span>
+<br><br> E-mail:
+<input type="text" name="email">
+<span class="error">* <?php echo $emailErr; ?></span>
+<br><br> Mobile No:
+<input type="text" name="mobileno">
+<span class="error">* <?php echo $mobilenoErr; ?></span>
+<br><br> Website:
+<input type="text" name="website">
+<span class="error"><?php echo $websiteErr; ?></span>
+<br><br> Gender:
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+<input type="radio" name="gender" value="other"> Other
+<span class="error">* <?php echo $genderErr; ?></span>
+<br><br>
+
+Agree to Terms of Service:
+<input type="checkbox" name="agree">
+<span class="error">* <?php echo $agreeErr; ?></span>
+<br><br>
+<input type="submit" name="submit" value="Submit">
+<br><br>
+</form>
+
+<?php
+if(isset($_POST['submit'])) {
+if($nameErr == "" && $emailErr == "" && $mobilenoErr == "" && $genderErr == "" && $websiteErr == "" && $agreeErr == "") {
+echo "<h3 color = #FF0001><b>You have sucessfully registered.</b></h3>"; echo "<h2>Your Input:</h2>";
+echo "Name: " .$name; echo "<br>";
+echo "Email: " .$email; echo "<br>";
+echo "Mobile No: " .$mobileno; echo "<br>";
+echo "Website: " .$website; echo "<br>";
+echo "Gender: " .$gender;
+} else {
+echo "<h3><b>You didn't filled up the form correctly.</b></h3>";
+}
+}
+?>
+
+</body>
+</html>
+
+Output-
+ 
+
+ 
+
+?	Create a register form
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> body {
+font-family: Arial, Helvetica, sans-serif; background-color: black;
+}
+* {
+box-sizing: border-box;
+}
+/* Add padding to containers */
+.container { padding: 16px;
+background-color: white;
+}
+/* Full-width input fields */ input[type=text], input[type=password] { width: 100%;
+padding: 15px; margin: 5px 0 22px 0; display: inline-block; border: none; background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus { background-color: #ddd;
+outline: none;
+}
+/* Overwrite default styles of hr */ hr {
+border: 1px solid #f1f1f1; margin-bottom: 25px;
+}
+/* Set a style for the submit button */
+.registerbtn {
+background-color: #04AA6D; color: white;
+padding: 16px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%;
+opacity: 0.9;
+}
+
+.registerbtn:hover { opacity: 1;
+}
+/* Add a blue text color to links */ a {
+color: dodgerblue;
+}
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+background-color: #f1f1f1; text-align: center;
+}
+</style>
+</head>
+<body>
+<form action="/action_page.php">
+<div class="container">
+<h1>Register</h1>
+<p>Please fill in this form to create an account.</p>
+<hr>
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Email" name="email" id="email" required>
+<label for="psw"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+<label for="psw-repeat"><b>Repeat Password</b></label>
+<input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+<hr>
+<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+<button type="submit" class="registerbtn">Register</button>
+</div>
+<div class="container signin">
+<p>Already have an account? <a href="#">Sign in</a>.</p>
+</div>
+</form>
+</body>
+</html>
+Output-
+ 
+
+ 
+
+
+?	
+?	
+?	
+?	
+?	
+?	
+?	
+?	
+?	
+?	
+?	
+?	
+?	Create a signup form
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+
+input[type=text], input[type=password] { width: 100%;
+padding: 15px; margin: 5px 0 22px 0; display: inline-block; border: none; background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */ input[type=text]:focus, input[type=password]:focus { background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for all buttons */ button {
+background-color: #04AA6D; color: white;
+padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%;
+opacity: 0.9;
+}
+
+button:hover { opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 20px; background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn { float: left;
+
+width: 50%;
+}
+
+/* Add padding to container elements */
+.container { padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */ position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */ left: 0;
+top: 0;
+width: 100%; /* Full width */ height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */ background-color: #474e5d;
+padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content { background-color: #fefefe;
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */ hr {
+border: 1px solid #f1f1f1; margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+position: absolute;
+
+right: 35px;
+
+top: 15px;
+font-size: 40px; font-weight: bold; color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus { color: #f44336; cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after { content: ""; clear: both; display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */ @media screen and (max-width: 300px) {
+.cancelbtn, .signupbtn { width: 100%;
+}
+}
+</style>
+<body>
+
+<h2>Modal Signup Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<form class="modal-content" action="/action_page.php">
+<div class="container">
+
+<h1>Sign Up</h1>
+<p>Please fill in this form to create an account.</p>
+<hr>
+
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Email" name="email" required>
+
+<label for="psw"><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="psw" required>
+
+<label for="psw-repeat"><b>Repeat Password</b></label>
+<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+<label>
+<input type="checkbox" checked="checked" name="remember" style="margin- bottom:15px"> Remember me
+</label>
+
+<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+<div class="clearfix">
+<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+<button type="submit" class="signupbtn">Sign Up</button>
+</div>
+</div>
+</form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it window.onclick = function(event) {
+if (event.target == modal) {
+
+modal.style.display = "none";
+}
+}
+</script>
+
+</body>
+
+</html>
+
+Output-
+ 
+
+
+
+
+ 
+
+
